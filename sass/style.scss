@@ -20,6 +20,11 @@ body {
     width: 100%;
     font-family: 'Work Sans', sans-serif;
 }
+
+a {
+    cursor: pointer;
+}
+
 h2 {
     color: $color-2;
     letter-spacing: 1px;
@@ -30,18 +35,33 @@ h2 {
     line-height: 40px;
 }
 
+h4,
+.pink-link {
+    font-weight: 600;
+    font-size: 14px;
+    color: $color-3;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 60px;
+}
+
+
+
+.pink-link:hover {
+    color: $color-0;
+}
+
+
 section {
     p {
         color: $color-2;
         font-size: 12px;
- 
-    
     }
 }
 
-
 .container {
-    max-width: 70%;
+    max-width: 1170px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
@@ -77,7 +97,7 @@ header {
         background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/9786/pexels-photo.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-position-y: 47%;
+        background-position-y: 48%;
         background-position-x: 29%;
         background-size: cover;
 
@@ -178,7 +198,6 @@ header {
                 margin-top: 40px;
 
                 &:hover {
-                    cursor: pointer;
                     background-color: $color-3-hv;
                     color: $color-1;
                 }
@@ -197,55 +216,73 @@ header {
         justify-content: right;
         padding: 20px 5px 0px 0px;
         min-height: 480px;
-        >div{
-        &:first-child {
-            margin-left: 15%;
-            flex: 4;
-            flex-basis: 0;
-            padding: 50px;
-            
-            p {
-                width: 80%;
-                line-height: 24px;
-            }
-            a {
-                font-weight: 600;
-                color: $color-3;
-                text-decoration: none;
-                text-transform: uppercase;
-                margin-top: 10px;
-            }
-        }
-        &:last-child {
-            flex: 6;
-            position: relative;
-            >.macbook-figure {
-                position: relative;
-                flex-wrap: wrap;
-                display: flex;      
-                justify-content: center;
-                bottom: -75px;
-                right: 10px;
-                #macbook-screen {
-                 position: relative;
-                 max-width: 78%;
-                 width: 560px;                
-                }
-                #macbook-frame {
-                    position: absolute;   
-                    max-width: 100%;     
-                    width: 720px;
-                }
 
-                
-                
+        >div {
+            &:first-child {
+                margin-left: 15%;
+                flex: 4;
+                flex-basis: 0;
+                padding: 50px;
+                p {
+                    width: 80%;
+                    line-height: 24px;
+                }
+            }
+
+            &:last-child {
+                flex: 6;
+                flex-wrap: wrap;
+                >.macbook-figure {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-end;
+                    bottom: -70px;
+                    #macbook-pro {
+                        width: 100%;
+                        max-width: 100%;
+                        height: 100%;
+                    }
+                }
             }
         }
     }
-}
 
 }
 
 .services {
+    padding-top: 100px;
+    display: flex;
     min-height: 500px;
+    justify-content: center;
+    text-align: center;
+    div {
+        p {
+            flex: 4;
+            width: 60%;
+            margin: 0 auto;    
+        }
+        .icon-row {
+            margin-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-self: center;
+            justify-content: space-evenly;
+    
+            >div {
+                img {
+                    height: 35%;
+                    max-height: 35%;
+                    width: auto;
+                    max-width: auto;
+                }
+    
+            }
+        }
+
+    }
+    
+
+    
+
+
 }

@@ -13,6 +13,10 @@ body {
   font-family: 'Work Sans', sans-serif;
 }
 
+a {
+  cursor: pointer;
+}
+
 h2 {
   color: #868686;
   letter-spacing: 1px;
@@ -23,13 +27,28 @@ h2 {
   line-height: 40px;
 }
 
+h4,
+.pink-link {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ED145B;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
+.pink-link:hover {
+  color: #000;
+}
+
 section p {
   color: #868686;
   font-size: 12px;
 }
 
 .container {
-  max-width: 70%;
+  max-width: 1170px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -63,7 +82,7 @@ header > div {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/9786/pexels-photo.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position-y: 47%;
+  background-position-y: 48%;
   background-position-x: 29%;
   background-size: cover;
 }
@@ -178,7 +197,6 @@ header > div > div > .button {
 }
 
 header > div > div > .button:hover {
-  cursor: pointer;
   background-color: #ed84a6;
   color: #fff;
 }
@@ -212,45 +230,59 @@ header > div > div > .button:hover {
   line-height: 24px;
 }
 
-.hero .row > div:first-child a {
-  font-weight: 600;
-  color: #ED145B;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
 .hero .row > div:last-child {
   -ms-flex: 6;
       flex: 6;
-  position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .hero .row > div:last-child > .macbook-figure {
   position: relative;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  bottom: -75px;
-  right: 10px;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  bottom: -70px;
 }
 
-.hero .row > div:last-child > .macbook-figure #macbook-screen {
-  position: relative;
-  max-width: 78%;
-  width: 560px;
-}
-
-.hero .row > div:last-child > .macbook-figure #macbook-frame {
-  position: absolute;
+.hero .row > div:last-child > .macbook-figure #macbook-pro {
+  width: 100%;
   max-width: 100%;
-  width: 720px;
+  height: 100%;
 }
 
 .services {
+  padding-top: 100px;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 500px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+}
+
+.services div p {
+  -ms-flex: 4;
+      flex: 4;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.services div .icon-row {
+  margin-top: 60px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+}
+
+.services div .icon-row > div img {
+  height: 35%;
+  max-height: 35%;
+  width: auto;
+  max-width: auto;
 }
 /*# sourceMappingURL=style.css.map */

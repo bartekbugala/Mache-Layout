@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -220,8 +221,8 @@ header > div > div > .button:hover {
   margin-left: 15%;
   -ms-flex: 4;
       flex: 4;
-  -ms-flex-preferred-size: 0;
-      flex-basis: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   padding: 50px;
 }
 
@@ -231,10 +232,10 @@ header > div > div > .button:hover {
 }
 
 .hero .row > div:last-child {
-  -ms-flex: 6;
-      flex: 6;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex: initial;
+      flex: initial;
+  -ms-flex-negative: 9;
+      flex-shrink: 9;
 }
 
 .hero .row > div:last-child > .macbook-figure {
@@ -248,7 +249,7 @@ header > div > div > .button:hover {
 
 .hero .row > div:last-child > .macbook-figure #macbook-pro {
   width: 100%;
-  max-width: 100%;
+  max-width: 80%;
   height: 100%;
 }
 
@@ -304,6 +305,10 @@ header > div > div > .button:hover {
 }
 
 .quotes div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
   width: 600px;
 }
 
@@ -318,10 +323,28 @@ header > div > div > .button:hover {
   font-weight: 300;
 }
 
-.quotes div span {
+.quotes div p span {
+  quotes: "“" "”" "‘" "’";
+}
+
+.quotes div p span:before, .quotes div p span:after {
   display: block;
-  font-size: 100px;
   color: #ED145B;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 400;
+  font-family: 'Overpass', sans-serif;
+  content: open-quote;
+  line-height: 0;
+}
+
+.quotes div p span:before {
+  padding-top: 140px;
+}
+
+.quotes div p span:after {
+  content: close-quote;
+  padding-top: 140px;
 }
 
 .prices {

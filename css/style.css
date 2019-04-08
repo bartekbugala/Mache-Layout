@@ -201,54 +201,59 @@ header > div > div > .button:hover {
   color: #fff;
 }
 
-.hero {
+.laptop {
   background-color: #f0f0f0;
 }
 
-.hero .row {
+.laptop .row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: right;
-      justify-content: right;
-  padding: 20px 5px 0px 0px;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: stretch;
+      align-items: stretch;
+  padding: 40px 15px 0px 200px;
   min-height: 480px;
 }
 
-.hero .row > div:first-child {
-  margin-left: 15%;
-  -ms-flex: 4;
-      flex: 4;
+.laptop .row > div:first-child {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  -ms-flex: 5;
+      flex: 5;
   padding: 50px;
+  justify-self: flex-end;
 }
 
-.hero .row > div:first-child p {
-  width: 80%;
+.laptop .row > div:first-child p {
   line-height: 24px;
+  margin-bottom: 20px;
 }
 
-.hero .row > div:last-child {
-  -ms-flex: initial;
-      flex: initial;
-  -ms-flex-negative: 9;
-      flex-shrink: 9;
-}
-
-.hero .row > div:last-child > .macbook-figure {
-  position: relative;
+.laptop .row > div:last-child {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex: 8;
+      flex: 8;
+  -ms-flex-align: end;
+      align-items: flex-end;
   -ms-flex-pack: end;
       justify-content: flex-end;
-  bottom: -70px;
+  margin-bottom: -40px;
 }
 
-.hero .row > div:last-child > .macbook-figure #macbook-pro {
+.laptop .row > div:last-child > .macbook-figure {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.laptop .row > div:last-child > .macbook-figure #macbook-pro {
   width: 100%;
-  max-width: 80%;
+  max-width: 100%;
   height: 100%;
 }
 
@@ -346,6 +351,74 @@ header > div > div > .button:hover {
 }
 
 .prices {
-  min-height: 800px;
+  padding-top: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 500px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.prices div p {
+  -ms-flex: 4;
+      flex: 4;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.prices div .price-row {
+  margin-top: 60px;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.prices div .price-row > div {
+  width: 200px;
+  background-color: #fff;
+  color: #868686;
+  height: 400px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex: initial;
+      flex: initial;
+}
+
+.prices div .price-row > div > div {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  background-color: #868686;
+  color: #fff;
+  justify-self: stretch;
+}
+
+.prices div .price-row > div > div > h5 {
+  font-size: 20px;
+}
+
+.prices div .price-row > div > div p {
+  width: 100%;
+}
+
+.prices div .price-row > div > div > div {
+  color: #868686;
+  background-color: #f0f0f0;
+  height: 35px;
+  line-height: 35px;
+  width: 150px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=style.css.map */

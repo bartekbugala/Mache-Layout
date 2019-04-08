@@ -195,7 +195,6 @@ header {
                 width: 160px;
                 border-radius: 20px;
                 margin-top: 40px;
-
                 &:hover {
                     background-color: $color-3-hv;
                     color: $color-1;
@@ -205,43 +204,41 @@ header {
     }
 }
 
-.hero {
+.laptop {
     background-color: $color-4;
-
     .row {
         display: flex;
         flex-wrap: wrap;
-        justify-content: right;
-        padding: 20px 5px 0px 0px;
+        justify-content: flex-end;
+        align-items: stretch;
+        padding: 40px 15px 0px 200px;
         min-height: 480px;
 
         >div {
-            &:first-child {
-                margin-left: 15%;
-                flex: 4;
-                flex-shrink: 0;
+            &:first-child {   
+                flex-shrink: 0;                
+                flex: 5;
                 padding: 50px;
-
+                justify-self: flex-end;
                 p {
-                    width: 80%;
                     line-height: 24px;
+                    margin-bottom: 20px;
                 }
             }
 
             &:last-child {
-                flex: initial;
-
-                flex-shrink: 9;
-
+              //  background: brown;
+                display: flex;
+                flex: 8;
+                align-items: flex-end;
+                justify-content: flex-end;
+                margin-bottom: -40px;
                 >.macbook-figure {
-                    position: relative;
                     display: flex;
-                    justify-content: flex-end;
-                    bottom: -70px;
-
-                    #macbook-pro {
+                    justify-content: center;                 
+                    #macbook-pro { 
                         width: 100%;
-                        max-width: 80%;
+                        max-width: 100%;
                         height: 100%;
                     }
                 }
@@ -337,5 +334,64 @@ header {
     }
 }
 .prices {
-    min-height: 800px;
+    padding-top: 100px;
+    display: flex;
+    min-height: 500px;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-4;
+    div {
+        p {
+            flex: 4;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .price-row {
+            margin-top: 60px;
+            display: flex;
+            justify-self: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            >div {
+                width: 200px;
+                background-color: $color-1;
+                color: $color-2;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                flex: initial; 
+                >div {
+                    display: flex;
+                    align-self: flex-start;
+                    background-color: $color-2;
+                    color: $color-1;
+                    justify-self: stretch;
+                    >h5 {
+                        font-size: 20px;
+                        span {
+
+                        }
+                    }
+                    p {
+                        width: 100%;
+                    }
+                    >div {
+                        
+                        color: $color-2;
+                        background-color: $color-4;
+                        height: 35px;
+                        line-height: 35px;
+                        width: 150px;
+                        border-radius: 15px;
+                        font-size: 12px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                    
+                }
+            }
+        }
+
+    }
 }

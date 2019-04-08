@@ -1,4 +1,8 @@
-Mache Layout using popular PSD template
-Made using NPM
-HTML, SASS, JS
-Made using various prefixers, helpers and validators.
+# Mache Layout
+## Made from popular PSD template
+
+Tech used:
+- HTML
+- SASS
+- JS
+- various prefixers, helpers and validators (NPM)

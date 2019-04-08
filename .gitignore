@@ -1,3 +1,7 @@
+# Helper Files
+package-lock.json
+package.json
+index_remove.html
 # Logs
 logs
 *.log

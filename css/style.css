@@ -66,7 +66,6 @@ section p {
 }
 
 .spacer {
-  display: block;
   border-width: 30px 98vw 0 0;
   border-color: #ED145B transparent transparent transparent;
   border-style: solid;
@@ -288,15 +287,14 @@ header > div > div > .button:hover {
 }
 
 .quotes {
+  display: -ms-flexbox;
+  display: flex;
   min-height: 400px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/9786/pexels-photo.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
   background-repeat: no-repeat;
-  background-position: top;
   background-size: cover;
   background-position-y: 28%;
   background-position-x: 29%;
-  display: -ms-flexbox;
-  display: flex;
   color: #f0f0f0;
   -ms-flex-pack: center;
       justify-content: center;

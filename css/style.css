@@ -53,10 +53,6 @@ section p {
   margin: 0 auto;
 }
 
-.pink {
-  color: #ED145B;
-}
-
 .line {
   display: inline-block;
   margin-top: 20px;
@@ -69,7 +65,7 @@ section p {
   border-width: 30px 98vw 0 0;
   border-color: #ED145B transparent transparent transparent;
   border-style: solid;
-  background-color: #fff;
+  background-color: #f0f0f0;
 }
 
 .button {
@@ -491,5 +487,13 @@ header > div > div > .button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.pink {
+  color: #ED145B !important;
+}
+
+.pink-background {
+  background-color: #ED145B !important;
 }
 /*# sourceMappingURL=style.css.map */

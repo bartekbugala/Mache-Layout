@@ -62,11 +62,6 @@ section {
     margin: 0 auto;
 }
 
-// change color to pink
-.pink {
-    color: $color-3;
-}
-
 // pink line below headings
 .line {
     display: inline-block;
@@ -81,7 +76,7 @@ section {
     border-width: 30px 98vw 0 0;
     border-color: $color-3 transparent transparent transparent;
     border-style: solid;
-    background-color: $color-1;
+    background-color: $color-4;
 }
 
 // pink button
@@ -462,4 +457,11 @@ header {
             }
         }
     }
+}
+// change color to pink
+.pink {
+    color: $color-3 !important;
+}
+.pink-background {
+    background-color: $color-3 !important;
 }

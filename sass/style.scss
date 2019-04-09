@@ -45,12 +45,9 @@ h4,
     margin-top: 60px;
 }
 
-
-
 .pink-link:hover {
     color: $color-0;
 }
-
 
 section {
     p {
@@ -65,11 +62,12 @@ section {
     margin: 0 auto;
 }
 
-// Helper Classes START
+// change color to pink
 .pink {
     color: $color-3;
 }
 
+// pink line below headings
 .line {
     display: inline-block;
     margin-top: 20px;
@@ -78,15 +76,36 @@ section {
     border-top: 2px solid $color-3;
 }
 
+// triangular spacer under header
 .spacer {
     border-width: 30px 98vw 0 0;
     border-color: $color-3 transparent transparent transparent;
     border-style: solid;
-    background-color: $color-4;
+    background-color: $color-1;
 }
 
-// Helper Classes END
+// pink button
+.button {
+    display: inline-block;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-1;
+    text-align: center;
+    background-color: $color-3;
+    height: 40px;
+    width: 160px;
+    border-radius: 20px;
 
+    &:hover {
+        background-color: $color-3-hv;
+        color: $color-1;
+    }
+}
+
+// header with navigation
 header {
     display: block;
     width: 100%;
@@ -182,30 +201,16 @@ header {
             }
 
             >.button {
-                display: inline-block;
-                line-height: 40px;
-                font-size: 14px;
-                font-weight: 500;
-                text-transform: uppercase;
-                text-decoration: none;
-                color: $color-1;
-                text-align: center;
-                background-color: $color-3;
-                height: 40px;
-                width: 160px;
-                border-radius: 20px;
                 margin-top: 40px;
-                &:hover {
-                    background-color: $color-3-hv;
-                    color: $color-1;
-                }
             }
         }
     }
 }
 
+// container with laptop on bottom
 .laptop {
     background-color: $color-4;
+
     .row {
         display: flex;
         flex-wrap: wrap;
@@ -215,11 +220,12 @@ header {
         min-height: 480px;
 
         >div {
-            &:first-child {   
-                flex-shrink: 0;                
+            &:first-child {
+                flex-shrink: 0;
                 flex: 5;
                 padding: 50px;
                 justify-self: flex-end;
+
                 p {
                     line-height: 24px;
                     margin-bottom: 20px;
@@ -227,16 +233,18 @@ header {
             }
 
             &:last-child {
-              //  background: brown;
+                //  background: brown;
                 display: flex;
                 flex: 8;
                 align-items: flex-end;
                 justify-content: flex-end;
                 margin-bottom: -40px;
+
                 >.macbook-figure {
                     display: flex;
-                    justify-content: center;                 
-                    #macbook-pro { 
+                    justify-content: center;
+
+                    #macbook-pro {
                         width: 100%;
                         max-width: 100%;
                         height: 100%;
@@ -245,7 +253,6 @@ header {
             }
         }
     }
-
 }
 
 .services {
@@ -309,8 +316,10 @@ header {
             font-family: 'Open Sans', sans-serif;
             font-style: italic;
             font-weight: 300;
+
             span {
                 quotes: "“""”""‘""’";
+
                 &:before,
                 &:after {
                     display: block;
@@ -322,9 +331,11 @@ header {
                     content: open-quote;
                     line-height: 0;
                 }
+
                 &:before {
                     padding-top: 140px;
                 }
+
                 &:after {
                     content: close-quote;
                     padding-top: 140px;
@@ -333,14 +344,16 @@ header {
         }
     }
 }
+
 .prices {
     padding-top: 100px;
     display: flex;
-    min-height: 500px;
+    min-height: 800px;
     justify-content: center;
     text-align: center;
     background-color: $color-4;
-    div {
+
+    >div {
         p {
             flex: 4;
             width: 60%;
@@ -353,45 +366,100 @@ header {
             justify-self: center;
             justify-content: space-evenly;
             flex-wrap: wrap;
+
+            div {
+                display: flex;
+            }
+
             >div {
                 width: 200px;
                 background-color: $color-1;
                 color: $color-2;
-                height: 400px;
-                display: flex;
-                justify-content: center;
-                flex: initial; 
-                >div {
-                    display: flex;
+                height: 350px;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                >div:first-of-type {
                     align-self: flex-start;
                     background-color: $color-2;
                     color: $color-1;
-                    justify-self: stretch;
-                    >h5 {
-                        font-size: 20px;
-                        span {
+                    flex-direction: column;
+                    width: 100%;
 
+                    >div:first-of-type {
+                        height: 100px;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-content: center;
+                        color: $color-1;
+
+                        >h5 {
+                            margin-top: 25px;
+                            display: inline-block;
+                            height: 40px;
+                            line-height: 40px;
+                            vertical-align: bottom;
+                            font-family: 'Lato', sans-serif;
+                            font-size: 40px;
+                            font-weight: 700;
+
+                            span {
+                                letter-spacing: 1px;
+                                font-size: 17px;
+                            }
+                        }
+
+                        p {
+                            display: block;
+                            color: $color-1;
+                            font-weight: 600;
+                            font-size: 12px;
+                            width: 100%;
                         }
                     }
-                    p {
-                        width: 100%;
-                    }
-                    >div {
-                        
+
+                    >div:last-of-type {
+                        justify-content: center;
+                        align-self: center;
                         color: $color-2;
                         background-color: $color-4;
-                        height: 35px;
-                        line-height: 35px;
+                        height: 36px;
+                        line-height: 36px;
                         width: 150px;
                         border-radius: 15px;
                         font-size: 12px;
                         font-weight: 600;
                         text-transform: uppercase;
+                        margin-bottom: -18px;
                     }
-                    
+                }
+
+                >div:last-of-type {
+                    height: 250px;
+                    flex-direction: column;
+                    justify-content: center;
+                    justify-content: space-evenly;
+                    align-self: center;
+                    justify-self: center;
+
+                    >ul {
+
+                        justify-self: center;
+                        font-size: 12px;
+                        list-style: none;
+                        color: $color-2;
+
+                        >li {
+                            margin-top: 10px;
+                        }
+                    }
+
+                    >.button {
+                        font-size: 12px;
+                        align-self: center;
+                    }
                 }
             }
         }
-
     }
 }

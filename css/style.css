@@ -69,7 +69,27 @@ section p {
   border-width: 30px 98vw 0 0;
   border-color: #ED145B transparent transparent transparent;
   border-style: solid;
-  background-color: #f0f0f0;
+  background-color: #fff;
+}
+
+.button {
+  display: inline-block;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  background-color: #ED145B;
+  height: 40px;
+  width: 160px;
+  border-radius: 20px;
+}
+
+.button:hover {
+  background-color: #ed84a6;
+  color: #fff;
 }
 
 header {
@@ -181,24 +201,7 @@ header > div > div p {
 }
 
 header > div > div > .button {
-  display: inline-block;
-  line-height: 40px;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-  text-align: center;
-  background-color: #ED145B;
-  height: 40px;
-  width: 160px;
-  border-radius: 20px;
   margin-top: 40px;
-}
-
-header > div > div > .button:hover {
-  background-color: #ed84a6;
-  color: #fff;
 }
 
 .laptop {
@@ -354,21 +357,21 @@ header > div > div > .button:hover {
   padding-top: 100px;
   display: -ms-flexbox;
   display: flex;
-  min-height: 500px;
+  min-height: 800px;
   -ms-flex-pack: center;
       justify-content: center;
   text-align: center;
   background-color: #f0f0f0;
 }
 
-.prices div p {
+.prices > div p {
   -ms-flex: 4;
       flex: 4;
   width: 60%;
   margin: 0 auto;
 }
 
-.prices div .price-row {
+.prices > div .price-row {
   margin-top: 60px;
   display: -ms-flexbox;
   display: flex;
@@ -379,46 +382,114 @@ header > div > div > .button:hover {
       flex-wrap: wrap;
 }
 
-.prices div .price-row > div {
+.prices > div .price-row div {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.prices > div .price-row > div {
   width: 200px;
   background-color: #fff;
   color: #868686;
-  height: 400px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex: initial;
-      flex: initial;
+  height: 350px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
 }
 
-.prices div .price-row > div > div {
-  display: -ms-flexbox;
-  display: flex;
+.prices > div .price-row > div > div:first-of-type {
   -ms-flex-item-align: start;
       align-self: flex-start;
   background-color: #868686;
   color: #fff;
-  justify-self: stretch;
-}
-
-.prices div .price-row > div > div > h5 {
-  font-size: 20px;
-}
-
-.prices div .price-row > div > div p {
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 100%;
 }
 
-.prices div .price-row > div > div > div {
+.prices > div .price-row > div > div:first-of-type > div:first-of-type {
+  height: 100px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  color: #fff;
+}
+
+.prices > div .price-row > div > div:first-of-type > div:first-of-type > h5 {
+  margin-top: 25px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: bottom;
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.prices > div .price-row > div > div:first-of-type > div:first-of-type > h5 span {
+  letter-spacing: 1px;
+  font-size: 17px;
+}
+
+.prices > div .price-row > div > div:first-of-type > div:first-of-type p {
+  display: block;
+  color: #fff;
+  font-weight: 600;
+  font-size: 12px;
+  width: 100%;
+}
+
+.prices > div .price-row > div > div:first-of-type > div:last-of-type {
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: #868686;
   background-color: #f0f0f0;
-  height: 35px;
-  line-height: 35px;
+  height: 36px;
+  line-height: 36px;
   width: 150px;
   border-radius: 15px;
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: -18px;
+}
+
+.prices > div .price-row > div > div:last-of-type {
+  height: 250px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  justify-self: center;
+}
+
+.prices > div .price-row > div > div:last-of-type > ul {
+  justify-self: center;
+  font-size: 12px;
+  list-style: none;
+  color: #868686;
+}
+
+.prices > div .price-row > div > div:last-of-type > ul > li {
+  margin-top: 10px;
+}
+
+.prices > div .price-row > div > div:last-of-type > .button {
+  font-size: 12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.css.map */
